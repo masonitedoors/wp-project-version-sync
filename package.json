@@ -1,6 +1,6 @@
 {
   "name": "@masonite/wp-project-version-sync",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Update your WordPress theme or plugin version based on a different source such as a package.json",
   "main": "index.js",
   "scripts": {
