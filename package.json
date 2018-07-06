@@ -6,9 +6,10 @@
   "scripts": {
     "test": "jest"
   },
+  "homepage": "https://github.com/masonitedoors/wp-project-version-sync#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/masonitedoors/wp-project-version-sync"
+    "url": "https://github.com/masonitedoors/wp-project-version-sync.git"
   },
   "jest": {
     "collectCoverage": true,
