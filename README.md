@@ -1,4 +1,4 @@
-# wp-update-project-version
+# wp-project-version-sync
 
 A CLI command to update your WordPress plugin or theme's [file header](https://codex.wordpress.org/File_Header) version based off of your `package.json` version.
 
@@ -7,9 +7,15 @@ wp-update-project-version is a CLI command that is most useful when added to you
 ```
 {
     "scripts":  {
-        "build": "webpack -p && wp-update-project-version -p style.css"
+        "build": "webpack -p && wp-project-version-sync -p style.css"
     }
 }
+```
+
+## Installation
+
+```
+npm i @masonite/wp-project-version-sync
 ```
 
 ## Usage
