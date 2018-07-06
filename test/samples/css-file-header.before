@@ -1,0 +1,14 @@
+/*
+Theme Name: Test Project
+Theme URI: https://wordpress.org/
+Description: Lorem Ipsum
+Version: 1.0.0
+Author: Lorem Ipsum
+Author URI: https://wordpress.org/
+Text Domain: wp
+Domain Path: /languages
+*/
+
+body {
+    color: red;
+}
