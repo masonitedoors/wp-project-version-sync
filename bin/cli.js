@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const program = require("commander");
 const chalk = require("chalk");
-const wpThemeVersionPattern = /^((?:<\?php\n)?\/\*\*?(?:.|\n)*Version:)(\s*)([\d.]*)((?:.|\n)+)/;
+const wpThemeVersionPattern = /^((?:<\?php\s+)?\/\*\*?[\s\S]*?Version:)(\s*)([\d.]*)/;
 
 run();
 
@@ -75,8 +75,8 @@ function getPackageJsonVersion() {
 }
 
 function replaceFileHeaderVersion(pathToFile, version) {
-  const replaceOutput = function(match, before, whitespace, oldVersion, after) {
-    return before + whitespace + version + after;
+  const replaceOutput = function(match, before, whitespace, oldVersion) {
+    return before + whitespace + version;
   };
   const file = fs.readFileSync(pathToFile, "utf8");
   return file.replace(wpThemeVersionPattern, replaceOutput);

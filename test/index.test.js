@@ -29,6 +29,23 @@ test("Replace version in file header", () => {
   });
 });
 
+test("Support CRLF line endings", () => {
+  let beforeFilePath = path.resolve(
+    __dirname,
+    `samples/php-file-header-crlf.before`
+  );
+  let afterFilePath = path.resolve(
+    __dirname,
+    `samples/php-file-header-crlf.after`
+  );
+ 
+  let afterFile = fs.readFileSync(afterFilePath, "utf8");
+ 
+  expect(replaceFileHeaderVersion(beforeFilePath, "1.1.0")).toEqual(
+    afterFile
+  );
+});
+
 test("Update file with new version in the file header", () => {
   let refFilePath = path.resolve(__dirname, 'samples/css-file-header.before');
   let refFile = fs.readFileSync(refFilePath, "utf8");
